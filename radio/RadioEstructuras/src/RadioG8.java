@@ -1,11 +1,21 @@
 public class RadioG8 implements Radio{
 
-    private boolean on = false;
-    private boolean frequency = true; //true = AM; false = FM
-    private double am_station = 530.0;
-    private double fm_station = 87.9;
-    private double[] am_savedStations = new double[12];
-    private double[] fm_savedStations = new double[12];
+    private boolean on;
+    private boolean frequency; //true = AM; false = FM
+    private double am_station;
+    private double fm_station;
+    private double[] am_savedStations;
+    private double[] fm_savedStations;
+    
+    public RadioG8() {
+        this.on = false;
+        this.frequency = true;
+        this.am_station = 530.0;
+        this.fm_station = 87.9;
+        this.am_savedStations = new double[12];
+        this.fm_savedStations = new double[12];
+        
+    }
 
     @Override //Determina si esta encendida la radio
     public boolean isOn() {
