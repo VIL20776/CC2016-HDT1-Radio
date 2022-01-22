@@ -32,10 +32,15 @@ public class RadioG8 implements Radio{
         if (frequency) {
             if (am_station < 1610) {
                 am_station += 10.0;
+            } else {
+                am_station = 530.0;
             }
-        } else{
+
+        } else {
             if (fm_station < 107.9){
                 fm_station += 0.2;
+            } else {
+                fm_station = 87.9;
             }
         }
         
@@ -46,10 +51,15 @@ public class RadioG8 implements Radio{
         if (frequency) {
             if (am_station > 530.0) {
                 am_station -= 10.0;
+            } else {
+                am_station = 1610;
             }
-        } else{
-            if (fm_station > 87.9){
+
+        } else {
+            if (fm_station > 87.9) {
                 fm_station -= 0.2;
+            } else {
+                fm_station = 107.9;
             }
         }
         
