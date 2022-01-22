@@ -1,3 +1,9 @@
+/**
+ * Clase Radio del grupo 8 que implementa la interface Radio
+ * @author Roberto Rios
+ * @author Dariel Villatoro
+ * @author Dimitrio Badani
+ */
 public class RadioG8 implements Radio{
 
     private boolean on;
