@@ -2,4 +2,4 @@
 
 # HDT1 de estructuras de datos
 
-Se piensa implementar una interfaz grafica para controlar la radio e implementar la interface para las funciones
+Programas terminados 22/01/2022
