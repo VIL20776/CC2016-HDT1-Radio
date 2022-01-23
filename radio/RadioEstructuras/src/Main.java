@@ -1,6 +1,9 @@
 // import static org.junit.Assert.assertEquals;
 // import org.junit.*;
 
+/**
+ * Main class, para ejecutar el programa
+ */
 public class Main {
     public static void main(String[] args) {
         MyFrame frame = new MyFrame(new RadioG8());
