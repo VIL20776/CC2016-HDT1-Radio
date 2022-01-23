@@ -13,6 +13,9 @@ public class RadioG8 implements Radio{
     private double[] am_savedStations;
     private double[] fm_savedStations;
     
+    /**
+     * Contructor de clase RadioG8
+     */
     public RadioG8() {
         this.on = false;
         this.frequency = true;
