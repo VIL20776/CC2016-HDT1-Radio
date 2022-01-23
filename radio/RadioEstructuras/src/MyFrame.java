@@ -9,14 +9,20 @@ import javax.swing.border.CompoundBorder;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+/**
+ * Clase MyFrame del grupo 8 que muestra en interfaz grafica el funcionamiento de la radio
+ * @author Roberto Rios
+ * @author Dariel Villatoro
+ * @author Dimitrio Badani
+ */
 public class MyFrame extends JFrame implements ActionListener {
 
     private JButton onOff, amFm, next, prev, fm1, fm2, fm3, fm4, fm5, fm6, am1, am2, am3, am4, am5, am6;
     private JLabel onOffMsg, amFmMsg, station, savedFm, savedAm, savedMsg, title;
-    private JPanel bg;
-    private JComboBox options;
-    private Radio radio;
-    private CompoundBorder border = new CompoundBorder();
+    private JPanel bg; // panel al fondo
+    private JComboBox options; // para guardar las estaciones
+    private Radio radio; // instancia de radio que sirve como parametro
+    private CompoundBorder border = new CompoundBorder(); // por estetica
 
     public MyFrame(Radio radio) {
         
@@ -56,6 +62,9 @@ public class MyFrame extends JFrame implements ActionListener {
         
     }
 
+    /**
+     * coloca un Jpanel personalizado en el JFrame para colocar los componentes
+     */
     private void putPanel() {
         bg = new JPanel();
         bg.setBackground(Color.WHITE);
@@ -64,6 +73,9 @@ public class MyFrame extends JFrame implements ActionListener {
         
     }
 
+    /**
+     * coloca las JLabels que indican al usuario que esta pasando en el Jpanel 
+     */
     private void putLabels() {
         onOffMsg = new JLabel("Off");
         onOffMsg.setBounds(80, 180, 80, 60);
@@ -97,6 +109,9 @@ public class MyFrame extends JFrame implements ActionListener {
 
     }
 
+    /**
+     * coloca los Jbuttons necesarios para el funcionamiento del radio en el Jpanel
+     */
     private void putButtons() {
         onOff = new JButton("On/Off");
         onOff.setBounds(50, 130, 80, 60);
@@ -197,6 +212,9 @@ public class MyFrame extends JFrame implements ActionListener {
 
     }
 
+    /**
+     * coloca el JcomboBox en el Jpanel para guardar la estacion
+     */
     private void putComboBox() {
         String [] items = {"Select", "1", "2", "3", "4", "5", "6"};
         options = new JComboBox(items);
@@ -205,6 +223,9 @@ public class MyFrame extends JFrame implements ActionListener {
         bg.add(options);
     }
 
+    /**
+     * metodo implementado para que se ejecuten las acciones al tocar los componentes
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         
